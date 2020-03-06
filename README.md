@@ -1,4 +1,3 @@
-# G1
----
+# 전지원 (Tommy)
 
-전지원의 Résumé입니다.
+[Profile](https://g1tommy.me/about)

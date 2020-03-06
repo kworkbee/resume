@@ -1,21 +1,27 @@
 {
-  "name": "resume",
+  "name": "profile",
   "version": "1.0.0",
-  "repository": "git@github.com:this-is-g1/resume",
-  "author": "G1 <g1.jeon@kakao.com>",
+  "repository": "git@github.com:kworkbee/profile",
+  "author": "G1 <g1.tommy.jeon@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "rm -rf docs; parcel build -d docs --public-url /resume src/index.html"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1",
-    "open-color": "^1.7.0",
-    "@fortawesome/fontawesome-free": "^5.12.1"
+    "start": "npm run start:ko",
+    "start:ko": "parcel src/index.html",
+    "start:en": "parcel src/lang/en.html",
+    "clean": "rm -rf docs",
+    "build:ko": "parcel build --dist-dir docs --public-url /profile ./src/index.html",
+    "build:en": "parcel build --dist-dir docs/lang --public-url /profile/lang ./src/lang/en.html;",
+    "build": "npm run build:ko; npm run build:en"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.2"
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@parcel/transformer-sass": "^2.10.3",
+    "autoprefixer": "^10.4.16",
+    "modern-normalize": "^2.0.0",
+    "node-forge": ">=1.3.0",
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.32",
+    "sass": "^1.26.2",
+    "tailwindcss": "^3.4.0"
   }
 }

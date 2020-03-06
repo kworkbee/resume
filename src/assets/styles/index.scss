@@ -1,0 +1,112 @@
+@import "../../../node_modules/modern-normalize/modern-normalize.css";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+// Layout
+main {
+  width: 1200px;
+  margin: 5svh auto;
+}
+
+@media (max-width: 1200px) {
+  main {
+    width: 100vw;
+    padding: 0 5vw;
+  }
+
+  .badge {
+    @apply mb-2;
+  }
+}
+
+section {
+  @apply relative;
+  &[data-total-duration]:after {
+    content: attr(data-total-duration);
+    @apply font-thin absolute right-0 top-4;
+  }
+  > header {
+    > h2 {
+      @apply font-semibold text-3xl border-b-2 mb-4 pb-2;
+    }
+  }
+  > :last-child {
+    @apply mb-10;
+  }
+}
+
+// Components
+a {
+  @apply transition-all;
+  &:hover {
+    @apply hover:text-red-600;
+  }
+}
+
+.badge {
+  @apply inline-flex flex-wrap gap-3 justify-between items-center w-fit rounded-lg p-4 shadow-md text-white transition-all hover:shadow-none;
+  > .icon {
+    > figure {
+      > img {
+        @apply max-h-10 brightness-0 invert;
+      }
+    }
+  }
+  > .text {
+    @apply font-bold text-xl;
+  }
+}
+
+.profile {
+  background: url("https://avatars.githubusercontent.com/u/18034626?s=400&u=2f0a886047c2d713f6f326f53c58564dae5cc9c1&v=4");
+  @apply rounded-full size-48 bg-no-repeat bg-center bg-fixed bg-cover bg-local border-2;
+  + div > header {
+    @apply mb-4;
+  }
+}
+
+.article {
+  > .wrapper {
+    @apply grid grid-cols-4 gap-4 mb-4;
+    > h3 {
+      @apply col-span-3;
+    }
+    > h4 {
+      @apply font-thin text-sm text-right;
+    }
+  }
+}
+
+.history {
+  &:not(:last-child) {
+    @apply mb-4;
+  }
+  > .wrapper {
+    @apply flex justify-between items-center mb-2;
+    > h3 {
+      @apply font-medium text-lg;
+    }
+    > h4 {
+      @apply font-light;
+    }
+    > h5 {
+      @apply font-medium text-sm ml-4;
+    }
+    > h6 {
+      @apply font-light text-sm;
+    }
+  }
+  > :not(.wrapper) {
+    @apply font-thin ml-2;
+  }
+}
+
+.thumbnail-link {
+  a {
+    @apply inline-block;
+  }
+  figure {
+    > img {
+      @apply transition-all mt-2 rounded-2xl shadow-md hover:shadow-none;
+    }
+  }
+}
