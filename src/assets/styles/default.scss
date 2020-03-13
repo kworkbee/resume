@@ -6,7 +6,7 @@
 }
   
 ::selection {
-  background: #00d2ff;
+  background: #ffc700;
 }
 
 .divider {
@@ -20,7 +20,10 @@ a {
   color: #3a7bd5;
   transition: color 0.3s ease;
   &:hover {
-    color: #00d2ff;
+    color: #ffc700;
+    font: {
+      weight: bold;
+    }
   }
 }
 
