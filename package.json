@@ -9,9 +9,9 @@
     "build": "rm -rf docs; parcel build -d docs --public-url /resume src/index.html"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "normalize.css": "^8.0.1",
-    "open-color": "^1.7.0",
-    "@fortawesome/fontawesome-free": "^5.12.1"
+    "open-color": "^1.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
