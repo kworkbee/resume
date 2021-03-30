@@ -143,3 +143,15 @@ footer {
   background: #f3c622;
   color: #333;
 }
+
+article {
+  margin: {
+    top: 20px;
+  }
+  > header {
+    font: {
+      weight: bold;
+      size: 120%;
+    }
+  }
+}
