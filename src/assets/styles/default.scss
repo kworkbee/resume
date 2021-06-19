@@ -17,6 +17,10 @@ body {
   }
 }
 
+hr {
+  margin-bottom: 30px;
+}
+
 .divider {
   margin: 10px 0;
   background-color: #dee2e6;
@@ -73,13 +77,14 @@ figure {
     }
     > h2, &[role="title"] > h1 {
       font-weight: 700;
+      margin-bottom: 15px;
     }
   }
 }
 
 .item {
   margin: {
-    bottom: 15px;
+    bottom: 30px;
   }
   > .head {
     margin: {
