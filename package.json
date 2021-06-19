@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "node-forge": ">=0.10.0",
     "normalize.css": "^8.0.1",
-    "open-color": "^1.7.0",
-    "node-forge": ">=0.10.0"
+    "open-color": "^1.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
