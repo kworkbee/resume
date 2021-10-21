@@ -8,23 +8,17 @@
 
 @mixin font-weight-light {
     font: {
-        weight: $--font-weight-200;
+        weight: $--font-weight-300;
     }
 }
 
 @mixin font-weight-regular {
     font: {
-        weight: $--font-weight-300;
-    }
-}
-
-@mixin font-weight-text {
-    font: {
         weight: $--font-weight-400;
     }
 }
 
-@mixin font-weight-medium {
+@mixin font-weight-text {
     font: {
         weight: $--font-weight-500;
     }
@@ -32,15 +26,16 @@
 
 @mixin font-weight-semibold {
     font: {
-        weight: $--font-weight-600;
+        weight: $--font-weight-700;
     }
 }
 
 @mixin font-weight-bold {
     font: {
-        weight: $--font-weight-700;
+        weight: $--font-weight-900;
     }
 }
+
 
 @mixin text-underline {
     position: relative;

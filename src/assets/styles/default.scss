@@ -35,6 +35,10 @@ header {
   }
 }
 
+.head > .subheader {
+  opacity: .6;
+}
+
 .subheader {
   font: {
     size: 1.1em;
@@ -58,7 +62,7 @@ header {
 
 p {
   font: {
-    size: 1.2em;
+    size: 1.15em;
   }
   margin: 0;
   > small {
@@ -79,6 +83,9 @@ p {
 .content {
   &.wide {
     min-height: 8em;
+    margin: {
+      bottom: 4em;
+    }
   }
 }
 
@@ -242,17 +249,22 @@ figure {
   }
 }
 
+details {
+  margin: {
+    bottom: 3em;
+  }
+}
+
 .article {
   position: relative;
-  & hr:not(:nth-of-type(1)) {
-    display: inline-block;
-    width: 10%;
-  }
   &:not(#intro) {
     margin: {
       top: 20px;
       bottom: 100px;
     }
+  }
+  margin: {
+    bottom: 6em;
   }
 }
 
@@ -266,39 +278,6 @@ figure {
   }
 }
 
-.progress {
-  margin: {
-    bottom: 2em;
-  }
-  > progress {
-    -webkit-appearance: none;
-    &[data-item-title]::before {
-      position: absolute;
-      content: attr(data-item-title);
-      top: -1.6em;
-      @include font-weight-text;
-      font: {
-        size: 1.2em;
-      }
-    }
-    &[value] {
-      position: relative;
-      width: 100%;
-      height: .2em;
-      &::after {
-        position: absolute;
-        content: attr(value) '%';
-        top: -1.6em;
-        right: 0;
-      }
-    }
-  }
-  > p {
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
-  }
-}
-
 //// Title
 #intro {
   & h1.hello {
@@ -306,15 +285,8 @@ figure {
     margin: {
       bottom: 40px;
     }
-    > em {
-      position: relative;
-      font: {
-        style: normal;
-        weight: 700;
-      }
-      &::after {
-        @include text-emphasized-underline;
-      }
+    > .underline > strong {
+      @include font-weight-bold;
     }
   }
   > #introduction {
@@ -328,41 +300,10 @@ figure {
 .gnb {
   background: #efefef;
   padding: 1em;
-  > h3 {
-    margin: {
-      bottom: 30px;
-    }
-  }
-  > .grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+  > details {
     > a {
-      position: relative;
-      font: {
-        weight: bold;
-        size: 1.1em;
-      }
-      text: {
-        align: center;
-      }
-      padding: 10px 0;
-      margin: {
-        bottom: 10px;
-      }
-      &:hover {
-        &::before {
-          position: absolute;
-          content: attr(data-lbl-desc);
-          width: 100%;
-          top: -.6rem;
-          left: 0;
-          color: #000;
-          font: {
-            weight: 300;
-            size: .8em;
-          }
-        }
-      }
+      display: inline-block;
+      padding: 0 2em;
     }
   }
 }
@@ -398,14 +339,9 @@ footer {
   @include area-grid-head-content;
 }
 
-// Progress
-::-webkit-progress-bar {
-  position: relative;
-  border-radius: 2rem;
-  background-color: lightgrey;
-}
-
-::-webkit-progress-value {
-  border-radius: 2rem;
-  background-color: orange;
+// Etc
+#skills > div:nth-child(3) > div > div > div.content > h4:not(:first-of-type) {
+  margin: {
+    top: 2em;
+  }
 }

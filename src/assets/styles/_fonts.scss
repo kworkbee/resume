@@ -1,77 +1,13 @@
 @import "./variables";
 @import "./mixins";
 
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 100;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 200;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 300;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 400;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 500;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Medium.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 600;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Semibold.woff') format('woff');
-}
-
-@font-face {
-  font: {
-    family: "IBMPlexSansKR";
-    weight: 700;
-    style: normal;
-  }
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * {
   word-break: keep-all;
-  @include font-weight-regular;
+  @include font-weight-text;
   font: {
-    weight: $--font-weight-300;
-    family: "IBMPlexSansKR", Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+    family: "Noto Sans KR", Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
   }
   line-height: $--default-line-height;
   letter-spacing: -0.3px;
@@ -97,6 +33,12 @@ a {
   }
 }
 
+i, em {
+  font: {
+    style: normal;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -110,7 +52,7 @@ h6 {
 
 h1 {
   font: {
-    weight: $--font-weight-700;
+    weight: $--font-weight-900;
     size: $--default-text-size * 2.5;
   }
 }
@@ -124,28 +66,28 @@ h2 {
 
 h3 {
   font: {
-    weight: $--font-weight-600;
-    size: $--default-text-size * 1.5;
+    weight: $--font-weight-500;
+    size: $--default-text-size * 1.7;
   }
 }
 
 h4 {
   font: {
-    weight: $--font-weight-600;
-    size: $--default-text-size;
+    weight: $--font-weight-400;
+    size: $--default-text-size * 1.3;
   }
 }
 
 h5 {
   font: {
-    weight: $--font-weight-500;
-    size: $--default-text-size * .8;
+    weight: $--font-weight-300;
+    size: $--default-text-size;
   }
 }
 
 h6 {
   font: {
-    weight: $--font-weight-500;
+    weight: $--font-weight-100;
     size: $--default-text-size * .6;
   }
 }
