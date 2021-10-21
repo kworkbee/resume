@@ -1,12 +1,77 @@
 @import "./variables";
+@import "./mixins";
 
-@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 100;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 200;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 300;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 400;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 500;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Medium.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 600;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: "IBMPlexSansKR";
+    weight: 700;
+    style: normal;
+  }
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   word-break: keep-all;
+  @include font-weight-regular;
   font: {
-    family: "Spoqa Han Sans", Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
-    weight: 300;
+    weight: $--font-weight-300;
+    family: "IBMPlexSansKR", Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
   }
   line-height: $--default-line-height;
   letter-spacing: -0.3px;
@@ -38,19 +103,49 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  @include font-weight-bold;
   line-height: $--default-line-height * .72;
   margin: 0;
 }
 
 h1 {
-  font-size: $--default-text-size * 2.5;
+  font: {
+    weight: $--font-weight-700;
+    size: $--default-text-size * 2.5;
+  }
 }
 
 h2 {
-  font-size: $--default-text-size * 2;
+  font: {
+    weight: $--font-weight-700;
+    size: $--default-text-size * 2;
+  }
 }
 
 h3 {
-  font-size: $--default-text-size * 1.5;
+  font: {
+    weight: $--font-weight-600;
+    size: $--default-text-size * 1.5;
+  }
+}
+
+h4 {
+  font: {
+    weight: $--font-weight-600;
+    size: $--default-text-size;
+  }
+}
+
+h5 {
+  font: {
+    weight: $--font-weight-500;
+    size: $--default-text-size * .8;
+  }
+}
+
+h6 {
+  font: {
+    weight: $--font-weight-500;
+    size: $--default-text-size * .6;
+  }
 }

@@ -1,0 +1,110 @@
+@import "./variables";
+
+@mixin font-weight-extralight {
+    font: {
+        weight: $--font-weight-100;
+    }
+}
+
+@mixin font-weight-light {
+    font: {
+        weight: $--font-weight-200;
+    }
+}
+
+@mixin font-weight-regular {
+    font: {
+        weight: $--font-weight-300;
+    }
+}
+
+@mixin font-weight-text {
+    font: {
+        weight: $--font-weight-400;
+    }
+}
+
+@mixin font-weight-medium {
+    font: {
+        weight: $--font-weight-500;
+    }
+}
+
+@mixin font-weight-semibold {
+    font: {
+        weight: $--font-weight-600;
+    }
+}
+
+@mixin font-weight-bold {
+    font: {
+        weight: $--font-weight-700;
+    }
+}
+
+@mixin text-underline {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 4px;
+        background: $--color-underline;
+    }
+}
+
+@mixin text-emphasized-underline {
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -2px;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: $--color-underline;
+}
+
+@mixin text-subtitle {
+    position: absolute;
+    width: 100%;
+    @include font-weight-regular;
+    text: {
+      transform: uppercase;
+    }
+    color: $--color-secondary;
+}
+
+@mixin area-divider-line {
+    width: 100%;
+    height: 1px;
+    margin: {
+      top: 10px;
+      right: 0;
+      bottom: 100px;
+      left: 0;
+    }
+    background: $--color-divider;
+}
+
+@mixin area-divider-empty {
+    margin: 2rem 0;
+}
+
+@mixin area-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin area-grid-head-content {
+    > div:nth-of-type(1) {
+        grid-column: 1 / 2;
+        + div {
+          text-align: left;
+          grid-column: 2 / 3;
+        }
+    }
+}
