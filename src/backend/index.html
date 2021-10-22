@@ -383,16 +383,24 @@
                                         <ul>
                                             <li>기획 및 풀스택 개발</li>
                                         </ul>
-                                        <img src="https://github.com/cyber-security-capstone-21-1/monitor-assistant/blob/master/architecture.png?raw=true" alt="CIWP Architecture" />
                                         <p>2차 개발 (21. 03 ~ 21. 07) - 4인 프로젝트</p>
                                         <ul>
                                             <li>프로젝트 리드</li>
                                             <li>
                                                 기능 보완
                                                 <ul>
-                                                    <li>MSA 아키텍쳐 기반 변경 시도</li>
-                                                    <li>기능별 애플리케이션 분리</li>
-                                                    <li>웹 페이지 아카이브 기능 추가</li>
+                                                    <li>
+                                                        <span>기능별 애플리케이션 분리</span>
+                                                        <img src="https://github.com/cyber-security-capstone-21-1/monitor-assistant/blob/master/architecture.png?raw=true" alt="CIWP Architecture" />
+                                                    </li>
+                                                    <li>
+                                                        <span>웹 페이지 아카이브(특정 시점 보존) 기능 추가</span>
+                                                        <ul>
+                                                            <li>AWS Lambda - Python 스크립트 구현</li>
+                                                            <li>AWS API Gateway의 Endpoint 통해 호출</li>
+                                                            <li>HTML 파싱, 에셋 다운로드 후 S3 버킷 저장 방식</li> 
+                                                        </ul>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -402,8 +410,8 @@
                                                     <li>
                                                         배포 자동화 구현
                                                         <ul>
-                                                            <li>Github Actions</li>
-                                                            <li>AWS CodeDeploy</li>
+                                                            <li>Github Actions (S3에 React 빌드 파일 배포)</li>
+                                                            <li>AWS CodeDeploy (EC2에 Springboot 빌드 파일 배포)</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
