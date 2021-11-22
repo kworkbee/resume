@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "repository": "git@github.com:g1-tommy/resume",
+  "repository": "git@github.com:kworkbee/resume",
   "author": "G1 <g1.jeon@kakao.com>",
   "license": "MIT",
   "scripts": {
