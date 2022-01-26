@@ -3,19 +3,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+$font-name-11stGothic: "11stGothic";
+
+@font-face {
+  font: {
+    family: $font-name-11stGothic;
+    weight: 700;
+  }
+  src: url('../fonts/11STREET_Gothic_bold.otf');
+}
+
+@font-face {
+  font: {
+    family: $font-name-11stGothic;
+    weight: 400;
+  }
+  src: url('../fonts/11STREET_Gothic_regular.otf');
+}
+
+@font-face {
+  font: {
+    family: $font-name-11stGothic;
+    weight: 100;
+  }
+  src: url('../fonts/11STREET_Gothic_light.otf');
+}
+
 * {
   word-break: keep-all;
   @include font-weight-text;
   font: {
-    family: "Noto Sans KR", Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+    family: "Noto Sans KR", $font-name-11stGothic, Montserrat, Source Sans Pro, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
   }
   line-height: $--default-line-height;
   letter-spacing: -0.3px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &:not(footer > *) {
-    color: #495057;
-  }
+  color: #495057;
 }
 
 body {
@@ -45,6 +69,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $font-name-11stGothic;
   line-height: $--default-line-height * .72;
   margin: 0;
 }

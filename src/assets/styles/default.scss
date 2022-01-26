@@ -238,6 +238,12 @@ figure {
   }
 }
 
+.description {
+  > p {
+    padding-left: 1rem;
+  }
+}
+
 .article {
   position: relative;
   &:not(#intro) {
@@ -297,8 +303,12 @@ footer {
     top: 2rem;
   }
   padding: 2rem 0;
-  background: #f3c622;
-  color: #333;
+  background: url(https://www.11stcorp.com/resources/img/bg_brand2.jpg) 50% 80%;
+  & header {
+    & strong {
+      color: #fff;
+    }
+  }
 }
 
 // Grid

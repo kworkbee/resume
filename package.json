@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf docs; parcel build -d docs --public-url /resume src/index.html; parcel build -d docs/overall --public-url /resume/overall src/overall/index.html; parcel build -d docs/backend --public-url /resume/backend src/backend/index.html;"
+    "build": "rm -rf docs; parcel build -d docs --public-url /resume src/index.html; parcel build -d docs --public-url /resume/profile src/profile/index.html; parcel build -d docs/overall --public-url /resume/overall src/overall/index.html; parcel build -d docs/backend --public-url /resume/backend src/backend/index.html;"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
