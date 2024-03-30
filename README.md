@@ -1,3 +1,3 @@
 # 전지원 (Tommy)
 
-[Profile](https://g1tommy.me/about)
+[Profile](https://about.g1tommy.me/about)

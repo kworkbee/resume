@@ -11,7 +11,7 @@
     "clean": "rm -rf docs",
     "build:ko": "parcel build --dist-dir docs --public-url /profile ./src/index.html",
     "build:en": "parcel build --dist-dir docs/lang --public-url /profile/lang ./src/lang/en.html;",
-    "build": "npm run build:ko; npm run build:en"
+    "build": "npm run clean; mkdir -p docs; npm run build:ko; npm run build:en"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
